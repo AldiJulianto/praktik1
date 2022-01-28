@@ -23,3 +23,9 @@ Route::get('home', [HomeController::class, 'home']);
 Route::get('list_siswa', [HomeController::class, 'lihat']);
 Route::get('list_siswa', [BiodataController::class, 'index']);
 
+// Route::get('form_tambah_siswa', function () {
+//     return view('form_tambah_siswa');
+// });
+
+Route:: get('form_tambah_siswa', [BiodataController::class, 'create']) -> name ('add-siswa');
+Route:: post('store', [BiodataController::class, 'store']);

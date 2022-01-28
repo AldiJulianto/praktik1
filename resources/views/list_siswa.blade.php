@@ -16,13 +16,13 @@
 </head>
 <body>
     @include('inc.navbar')
-    < <div class="jumbotron jumbotron-fluid">
+     <div>
         <div class="m-4">
           <h1 class="display-4">List Data Siswa</h1>
           <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent</p>
         </div>
       </div>
-      <div class="container">
+      <div class="container ">
           <div class="row">
               <div class="col-md-12">
                 <table class="display" id="tabel_siswa">
@@ -66,8 +66,9 @@
                     </tbody>
                   </table>
               </div>
-              <button type="button" class="btn btn-primary">Tambah Siswa</button>
           </div>
+          <a href="{{route('add-siswa')}}"><button type="button" class="btn btn-primary">Tambah Siswa</button></a>
+
       </div>
 
 
