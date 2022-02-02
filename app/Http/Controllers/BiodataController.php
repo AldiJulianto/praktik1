@@ -18,7 +18,7 @@ class BiodataController extends Controller
             'title' => 'List Siswa',
             'bios' => Biodata::orderBy('created_at', 'desc')->get(),
         ];
-        return view ('/list_siswa', $data);
+        return view ('list_siswa', $data);
     }
 
     /**
@@ -59,7 +59,7 @@ class BiodataController extends Controller
 
 
         $bio->save();
-        return redirect()->route('/list_siswa');
+        return redirect() -> route('list_siswa');
 
     }
 
