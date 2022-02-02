@@ -20,12 +20,12 @@ Route::get('welcome', function () {
 });
 
 Route::get('home', [HomeController::class, 'home']);
-Route::get('list_siswa', [HomeController::class, 'lihat']);
-Route::get('list_siswa', [BiodataController::class, 'index']);
+Route:: get('/list_siswa', [BiodataController::class, 'index'])->name('list-siswa');
+Route:: get('/list_siswa', [HomeController::class, 'index'])->name('lihat-siswa');
 
 // Route::get('form_tambah_siswa', function () {
 //     return view('form_tambah_siswa');
 // });
 
-Route:: get('form_tambah_siswa', [BiodataController::class, 'create']) -> name ('add-siswa');
-Route:: post('store', [BiodataController::class, 'store']);
+Route:: get('form_tambah_siswa', [BiodataController::class, 'create'])->name('add-siswa');
+Route:: post('/store_siswa', [BiodataController::class, 'store']);

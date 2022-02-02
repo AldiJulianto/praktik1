@@ -23,7 +23,8 @@
         </div>
       </div>
       <div class="container">
-        <form class="m-4" method="POST" action="/store_siswa" <?php echo csrf_field(); ?> <?php echo method_field('POST'); ?>>
+        <form class="m-4" method="POST" action="/store_siswa">
+            <?php echo csrf_field(); ?>
             <div class="form-group">
                 <label for="nama">Nama</label>
                 <input type="text" class="form-control"  placeholder="Nama Lengkap" name="nama">

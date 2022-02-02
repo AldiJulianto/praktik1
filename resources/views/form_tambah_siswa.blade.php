@@ -23,7 +23,8 @@
         </div>
       </div>
       <div class="container">
-        <form class="m-4" method="POST" action="/store_siswa" @csrf @method('POST')>
+        <form class="m-4" method="POST" action="/store_siswa">
+            @csrf
             <div class="form-group">
                 <label for="nama">Nama</label>
                 <input type="text" class="form-control"  placeholder="Nama Lengkap" name="nama">
