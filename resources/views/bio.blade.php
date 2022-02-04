@@ -11,7 +11,7 @@
     <title>Hello, world!</title>
   </head>
   <body>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="welcome">MyBio</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,17 +41,22 @@
 
                 </ul>
                 </li>
-            </ul>
-            <form class="d-flex">
 
-                <button>
-                    <a class="dropdown-item" href="{{ route('logout') }}"
-                onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();">
-                {{ __('Logout') }}
-            </a>
-                </button>
-            </form>
+            </ul>
+            <div class="mr-4">
+                Hi,  {{ Auth::user()->name }}
+            </div>
+            <div>
+
+                <form class="d-flex">
+                    <button class="btn btn-danger">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                    {{ __('Logout') }}
+                </a>
+                    </button>
+                </form>
             </div>
         </div>
         </nav>

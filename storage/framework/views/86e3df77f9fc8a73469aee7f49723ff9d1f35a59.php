@@ -41,18 +41,24 @@
 
             </ul>
             </li>
+
         </ul>
-        <form class="d-flex">
+        <div class="mr-4">
+            Hi,  <?php echo e(Auth::user()->name); ?>
 
-            <button>
-                <a class="dropdown-item" href="<?php echo e(route('logout')); ?>"
-            onclick="event.preventDefault();
-                        document.getElementById('logout-form').submit();">
-            <?php echo e(__('Logout')); ?>
+        </div>
+        <div>
 
-        </a>
-            </button>
-        </form>
+            <form class="d-flex">
+                <button class="btn btn-danger">
+                    <a class="dropdown-item" href="<?php echo e(route('logout')); ?>"
+                onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+                <?php echo e(__('Logout')); ?>
+
+            </a>
+                </button>
+            </form>
         </div>
     </div>
     </nav>

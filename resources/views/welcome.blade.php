@@ -15,7 +15,7 @@
         <h1>
             Welcome To My Website
         </h1>
-        <p>HAi</p>
+        <p>HAI</p>
     </center>
 </body>
 </html>

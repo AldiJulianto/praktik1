@@ -41,17 +41,22 @@
 
                 </ul>
                 </li>
-            </ul>
-            <form class="d-flex">
 
-                <button>
-                    <a class="dropdown-item" href="{{ route('logout') }}"
-                onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();">
-                {{ __('Logout') }}
-            </a>
-                </button>
-            </form>
+            </ul>
+            <div class="mr-4">
+                Hi,  {{ Auth::user()->name }}
+            </div>
+            <div>
+
+                <form class="d-flex">
+                    <button class="btn btn-danger">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                    {{ __('Logout') }}
+                </a>
+                    </button>
+                </form>
             </div>
         </div>
         </nav>
