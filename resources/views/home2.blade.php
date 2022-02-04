@@ -13,34 +13,48 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="welcome">MyBio</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="welcome">MyBio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
+                <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
-              </li>
-              <li class="nav-item">
+                </li>
+                <li class="nav-item">
                 <a class="nav-link" href="#">Blog</a>
-              </li>
-              <li class="nav-item dropdown">
+                </li>
+                <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="home" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Siswa
+                    Siswa
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="{{route('list')}}">Lihat Data</a></li>
-                  <li><a class="dropdown-item" href="{{route('add-siswa')}}">Tambah Siswa</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-            </ul>
+                    <li><a class="dropdown-item" href="{{route('list')}}">Lihat Data</a></li>
+                    <li><a class="dropdown-item" href="{{route('add-siswa')}}">Tambah Siswa</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form></li>
 
-          </div>
+
+                </ul>
+                </li>
+            </ul>
+            <form class="d-flex">
+
+                <button>
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+                {{ __('Logout') }}
+            </a>
+                </button>
+            </form>
+            </div>
         </div>
-      </nav>
+        </nav>
 
 
 
