@@ -19,14 +19,16 @@ Route::get('welcome', function () {
     return view('welcome');
 });
 
-Route::get('home', [HomeController::class, 'home']);
-Route::get('list_siswa', [BiodataController::class, 'index']);
-Route::get('list_siswa', [HomeController::class, 'lihat']);
-// Route::get('list_siswa', [BiodataController::class, 'index']);
+Route::get('home', [HomeController::class, 'home'])->name('home');
+Route::get('/list', [BiodataController::class, 'index'])->name('list');
+Route:: post('store_siswa', [BiodataController::class, 'store']);
+Route::get('/edit/{id}', [BiodataController::class, 'edit'])->name('edit-siswa');
+Route::put('/update/{id}', [BiodataController::class, 'update'])->name('update-siswa');
+Route::delete('/delete/{id}', [BiodataController::class, 'destroy'])->name('destroy-siswa');
+Route::get('/bio/{id}', [BiodataController::class, 'show'])->name('show-bio');
+Route:: get('form_tambah_siswa', [BiodataController::class, 'create']) -> name ('add-siswa');
+
 
 // Route::get('form_tambah_siswa', function () {
 //     return view('form_tambah_siswa');
 // });
-
-Route:: get('form_tambah_siswa', [BiodataController::class, 'create']) -> name ('add-siswa');
-Route:: post('/store_siswa', [BiodataController::class, 'store']);

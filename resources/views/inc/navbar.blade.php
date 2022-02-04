@@ -20,7 +20,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="home">Home</a>
+          <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Blog</a>
@@ -30,7 +30,7 @@
             Siswa
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="list_siswa">Lihat Data</a></li>
+            <li><a class="dropdown-item" href="{{route('list')}}">Lihat Data</a></li>
             <li><a class="dropdown-item" href="{{route('add-siswa')}}">Tambah Siswa</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>

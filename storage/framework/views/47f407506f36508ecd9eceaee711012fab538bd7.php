@@ -22,7 +22,7 @@
           <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent</p>
         </div>
       </div>
-      <div class="container ">
+      <div class="m-4 ">
           <div class="row">
               <div class="col-md-12">
                 <table class="display" id="tabel_siswa">
@@ -55,11 +55,14 @@
                         <td><?php echo e($bio -> almt); ?></td>
                         <td><?php echo e($bio -> telp); ?></td>
                         <td><?php echo e($bio -> email); ?></td>
-                      <td>
-                          <button type="button" class="btn btn-warning">Edit</button>
-                          <button type="button" class="btn btn-danger">Delete</button>
-                          <button type="button" class="btn btn-primary">Lihat</button>
-                      </td>
+                        <td><form method="POST" action="<?php echo e(route('destroy-siswa',$bio->id)); ?>">
+                            <a button type="button" class="btn btn-warning" href="<?php echo e(route('edit-siswa',$bio->id)); ?>">Edit</button></a>
+                                <?php echo csrf_field(); ?>
+                                <?php echo method_field('DELETE'); ?>
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                                <a button type="button" class="btn btn-primary" href="<?php echo e(route('show-bio',$bio->id)); ?>">Lihat</button></a>
+                            </form>
+                        </td>
                       </tr>
 
                       <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

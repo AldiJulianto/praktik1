@@ -22,7 +22,7 @@
           <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent</p>
         </div>
       </div>
-      <div class="container ">
+      <div class="m-4 ">
           <div class="row">
               <div class="col-md-12">
                 <table class="display" id="tabel_siswa">
@@ -55,11 +55,14 @@
                         <td>{{$bio -> almt}}</td>
                         <td>{{$bio -> telp}}</td>
                         <td>{{$bio -> email}}</td>
-                      <td>
-                          <button type="button" class="btn btn-warning">Edit</button>
-                          <button type="button" class="btn btn-danger">Delete</button>
-                          <button type="button" class="btn btn-primary">Lihat</button>
-                      </td>
+                        <td><form method="POST" action="{{ route('destroy-siswa',$bio->id) }}">
+                            <a button type="button" class="btn btn-warning" href="{{ route('edit-siswa',$bio->id) }}">Edit</button></a>
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                                <a button type="button" class="btn btn-primary" href="{{ route('show-bio',$bio->id) }}">Lihat</button></a>
+                            </form>
+                        </td>
                       </tr>
 
                       @endforeach

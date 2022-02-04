@@ -20,7 +20,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="<?php echo e(route('home')); ?>">Home</a>
+                <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Blog</a>
@@ -30,8 +30,8 @@
                   Siswa
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="<?php echo e(route('list')); ?>">Lihat Data</a></li>
-                  <li><a class="dropdown-item" href="<?php echo e(route('add-siswa')); ?>">Tambah Siswa</a></li>
+                  <li><a class="dropdown-item" href="{{route('list')}}">Lihat Data</a></li>
+                  <li><a class="dropdown-item" href="{{route('add-siswa')}}">Tambah Siswa</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
@@ -41,19 +41,16 @@
           </div>
         </div>
       </nav>
-
-
-
       <div class="jumbotron jumbotron-fluid">
         <div class="container">
-          <h1 class="display-4"><?php echo e($judul); ?></h1>
-          <p class="lead"><?php echo e($subJudul); ?></p>
+          <h1 class="display-4">Biodata Siswa</h1>
+          <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
         </div>
       </div>
       <div class="container">
         <div class="row">
           <div class="col-md-2">
-            <img src="<?php echo e($foto); ?>" class="rounded-circle" width="100%" height="60%" >
+            <img src="" class="rounded-circle" width="80%">
           </div>
           <div class="col-md-6">
             Informasi Pribadi
@@ -64,35 +61,35 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col-md-6">Nama Lengkap</div>
-                    <div class="col-md-6">: <?php echo e($nama); ?></div>
+                    <div class="col-md-6">: {{ $bio->nama }}</div>
                   </div>
                   <div class="row">
                     <div class="col-md-6">Tempat, Tanggal Lahir</div>
-                    <div class="col-md-6">: <?php echo e($lahir); ?></div>
+                    <div class="col-md-6">: {{ $bio->lahir }}</div>
                   </div>
                   <div class="row">
                     <div class="col-md-6">Hobby</div>
-                    <div class="col-md-6">: <?php echo e($hobi); ?></div>
+                    <div class="col-md-6">: {{ $bio->hobi }}</div>
                   </div>
                   <div class="row">
                     <div class="col-md-6">Jenis Kelamin</div>
-                    <div class="col-md-6">: <?php echo e($jk); ?></div>
+                    <div class="col-md-6">: {{ $bio->jk }}</div>
                   </div>
                   <div class="row">
                     <div class="col-md-6">Agama</div>
-                    <div class="col-md-6">: <?php echo e($hobi); ?></div>
+                    <div class="col-md-6">: {{ $bio->agama }}</div>
                   </div>
                   <div class="row">
                     <div class="col-md-6">Alamat</div>
-                    <div class="col-md-6">: <?php echo e($almt); ?></div>
+                    <div class="col-md-6">: {{ $bio->almt }}</div>
                  </div>
                   <div class="row">
                      <div class="col-md-6">Telp</div>
-                     <div class="col-md-6">: <?php echo e($telp); ?></div>
+                     <div class="col-md-6">: {{ $bio->telp }}</div>
                   </div>
                   <div class="row">
                     <div class="col-md-6">Email</div>
-                    <div class="col-md-6">: <?php echo e($email); ?></div>
+                    <div class="col-md-6">: {{ $bio->email }}</div>
                  </div>
                 </div>
               </div>
@@ -101,18 +98,18 @@
             Riwayat Pendidikan
             <div class="list-group">
                 <div class="list-group-item list-group-item-action">
-                  <h5 class="mb-1">Universitas Indonesia</h5>
+                  <h5 class="mb-1">Universitas Komputer Indonesia</h5>
                   <p class="mb-1">Sistem Informasi</p>
-                  <small>2022 - 2026</small>
+                  <small>2021 - 2005</small>
                 </div>
                 <div class="list-group-item list-group-item-action">
-                  <h5 class="mb-1">SMK Bakti Nusantara 666</h5>
-                  <p class="mb-1">Rekayasa PErangkat Lunak</p>
-                  <small>2019 - 2022</small>
+                  <h5 class="mb-1">SMA Negeri 2 Cimahi</h5>
+                  <p class="mb-1">Ilmu Pengetahuan Sosial</p>
+                  <small>1998 - 2021</small>
                 </div>
                 <div class="list-group-item list-group-item-action">
-                  <h5 class="mb-1">SMP Negeri Al Ahzar</h5>
-                  <small>2016 - 2019</small>
+                  <h5 class="mb-1">SMP Negeri 3 Cimahi</h5>
+                  <small>1995 - 1998</small>
                 </div>
           </div>
         </div>
@@ -155,4 +152,3 @@
     -->
   </body>
 </html>
-<?php /**PATH C:\xampp\htdocs\praktik1AldiJulianto\resources\views/home.blade.php ENDPATH**/ ?>
