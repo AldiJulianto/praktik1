@@ -33,7 +33,16 @@
             <li><a class="dropdown-item" href="<?php echo e(route('list')); ?>">Lihat Data</a></li>
             <li><a class="dropdown-item" href="<?php echo e(route('add-siswa')); ?>">Tambah Siswa</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <<a class="dropdown-item" href="<?php echo e(route('logout')); ?>"
+            onclick="event.preventDefault();
+                          document.getElementById('logout-form').submit();">
+             <?php echo e(__('Logout')); ?>
+
+         </a>
+
+         <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" class="d-none">
+             <?php echo csrf_field(); ?>
+         </form>
           </ul>
         </li>
       </ul>

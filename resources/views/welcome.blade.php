@@ -15,7 +15,7 @@
         <h1>
             Welcome To My Website
         </h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, rem, vero reiciendis velit corporis illo inventore harum aliquid explicabo veritatis error assumenda molestias sapiente eligendi laboriosam necessitatibus maiores amet nesciunt?</p>
+        <p>HAi</p>
     </center>
 </body>
 </html>

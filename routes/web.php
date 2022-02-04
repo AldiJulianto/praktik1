@@ -19,7 +19,7 @@ Route::get('welcome', function () {
     return view('welcome');
 });
 
-Route::get('home', [HomeController::class, 'home'])->name('home');
+Route::get('home2', [HomeController::class, 'home'])->name('home');
 Route::get('/list', [BiodataController::class, 'index'])->name('list');
 Route:: post('store_siswa', [BiodataController::class, 'store']);
 Route::get('/edit/{id}', [BiodataController::class, 'edit'])->name('edit-siswa');
@@ -32,3 +32,8 @@ Route:: get('form_tambah_siswa', [BiodataController::class, 'create']) -> name (
 // Route::get('form_tambah_siswa', function () {
 //     return view('form_tambah_siswa');
 // });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
